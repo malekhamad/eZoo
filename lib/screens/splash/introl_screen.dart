@@ -36,19 +36,15 @@ class IntroScreenDefault extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
       body: OnBoard(
         onBoardData: onBoardData ,
         titleStyles: const TextStyle(
           fontSize: 24,
-          fontFamily: 'Poppins',
-          fontWeight: FontWeight.w600,
-
+          fontFamily: 'Nunito',
         ),
         descriptionStyles: TextStyle(
           fontSize: 16,
-          color: Colors.brown.shade300,
-          fontFamily: 'Poppins'),
+          color: Colors.brown.shade300),
         pageIndicatorStyle: const PageIndicatorStyle(
           width: 70,
           inactiveColor: Colors.black12,
@@ -76,7 +72,7 @@ class IntroScreenDefault extends StatelessWidget {
                   state.isLastPage ? "Get Started" : "Next",
                   style: const TextStyle(
                     color: Colors.white,
-                    fontWeight: FontWeight.bold
+                    fontWeight: FontWeight.w600
                   ),
                 ),
               ),
@@ -86,12 +82,11 @@ class IntroScreenDefault extends StatelessWidget {
         pageController: _pageController,
         // Either Provide onSkip Callback or skipButton Widget to handle skip state
         onSkip: () {
-          Prefs.setBool(AppConstants.isReachedToLoginPage, true);
+          // Prefs.setBool(AppConstants.isReachedToLoginPage, true);
           Navigator.pushNamedAndRemoveUntil(context, LoginScreen.routeName, (route) => false);
           },
         // Either Provide onDone Callback or nextButton Widget to handle done state
         onDone: () {
-          print('done tapped');
         },
       ),
     );
@@ -105,7 +100,7 @@ class IntroScreenDefault extends StatelessWidget {
         curve: Curves.easeInOutSine,
       );
     } else {
-      Prefs.setBool(AppConstants.isReachedToLoginPage, true);
+      // Prefs.setBool(AppConstants.isReachedToLoginPage, true);
       Navigator.pushNamedAndRemoveUntil(context, LoginScreen.routeName, (route) => false);
     }
   }
