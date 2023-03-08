@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mini_zoo/screens/splash/introl_screen.dart';
 import 'package:mini_zoo/utils/app_color.dart';
-import 'package:mini_zoo/utils/app_constants.dart';
+import 'package:mini_zoo/utils/asset_urls.dart';
 import 'package:mini_zoo/widgets/get_started_btn.dart';
 
 class SplashScreen extends StatelessWidget {
@@ -11,7 +11,7 @@ class SplashScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(AppColor.splashColor),
+      backgroundColor: const Color(AppColor.lightRed),
         body: Stack(
           children:[ Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -19,7 +19,7 @@ class SplashScreen extends StatelessWidget {
             children: [
               Center(child: Padding(
                 padding: const EdgeInsets.all(42.0),
-                child: Image.asset(AppConstants.splashLogoImage),
+                child: Image.asset(AssetUrls.splashLogoImage),
               )
               ),
               const SizedBox(height: 20,)

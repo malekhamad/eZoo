@@ -7,13 +7,15 @@ class EditTextFormWidget extends StatefulWidget {
   final TextInputType keyboardType ;
   final TextInputAction textInputAction ;
   final String iconUrl ;
-  const EditTextFormWidget({Key? key,required this.hintText, this.keyboardType = TextInputType.text, this.textInputAction = TextInputAction.next, required this.iconUrl}) : super(key: key);
+  final int color ;
+  const EditTextFormWidget({Key? key,required this.hintText, this.keyboardType = TextInputType.text, this.textInputAction = TextInputAction.next, required this.iconUrl,this.color = AppColor.lightRed}) : super(key: key);
 
   @override
   State<EditTextFormWidget> createState() => _EditTextFormWidgetState();
 }
 
 class _EditTextFormWidgetState extends State<EditTextFormWidget> {
+
   @override
   Widget build(BuildContext context) {
     return  Row(
@@ -22,9 +24,9 @@ class _EditTextFormWidgetState extends State<EditTextFormWidget> {
          Padding(
            padding: const EdgeInsets.all(16.0),
                child:Image.asset(widget.iconUrl,
-              width: 30,
-              height: 30
-              ,color: const Color(AppColor.splashColor
+              width: 25,
+              height: 25
+              ,color:  Color(widget.color
               )
           )
         ),

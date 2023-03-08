@@ -38,6 +38,10 @@ dependencies:
   shared_preferences: ^2.0.18
   intro_slider: ^4.2.0
   flutter_onboard: ^2.0.0
+  flutter_localizations:
+    sdk: flutter
+  intl: any
+  pin_code_fields: ^7.4.0
 
 dev_dependencies:
   flutter_test:
@@ -95,3 +99,5 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+flutter_intl:
+  enabled: true

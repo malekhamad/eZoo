@@ -1,16 +1,5 @@
-class AppConstants{
+class AssetUrls{
 
-  /// Shared Preference Keys ...
-  static String isReachedToLoginPage = "is_reach_to_login_page";
-  static String isLightMode ="is_light_mode";
-  static String phoneNumber = "phone_number";
-  static String email = "email";
-  static String password = "password";
-  static String isUser = "is_user";
-
-
-
-  /// Images URL ...
   static String splashLogoImage = 'assets/images/splash_logo.png';
   static String petBagImage = 'assets/images/pet_bag.png';
   static String petHouseImage = 'assets/images/pet_house.png';
@@ -19,6 +8,9 @@ class AppConstants{
   static String lockIcon = 'assets/images/lock.png';
   static String eyeSlashIcon = 'assets/images/eye_slash.png';
   static String phoneIcon = 'assets/images/phone_icon.png';
+  static String personIcon = 'assets/images/person.png';
+  static String checkEmailIcon = 'assets/images/check_your_email.png';
+  static String phoneVerifyIcon = 'assets/images/phone_confirmation.png';
 
 
 }
